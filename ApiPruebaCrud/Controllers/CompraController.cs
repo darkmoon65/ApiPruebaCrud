@@ -24,9 +24,9 @@ namespace ApiPruebaCrud.Controllers
         }
 
         [HttpGet("{id}")]
-        public Compra Get(int id)
+        public IEnumerable<Compra> GetByUser(int id)
         {
-            return _CompraRepository.GetById(id);
+            return _CompraRepository.GetByUserId(id);
         }
 
         [HttpPost]
