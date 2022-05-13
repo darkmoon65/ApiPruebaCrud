@@ -55,7 +55,7 @@ namespace ApiPruebaCrud.Repositories
             using (IDbConnection dbConnection = Connection)
             {
                 dbConnection.Open();
-                return dbConnection.Query<Compra>("SeleccionarCompra", new { Id = id }, commandType: CommandType.StoredProcedure);
+                return dbConnection.Query<Compra>("SeleccionarUsuario", new { Id = id }, commandType: CommandType.StoredProcedure);
             }
         }
         public void Delete(int id)
